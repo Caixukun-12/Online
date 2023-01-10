@@ -1,5 +1,5 @@
 # Caixukun12
-这是一个基于[谭景园大佬](https://github.com/tjy-github/win12)Windows12开发的Caixukun12
+这是一个基于[谭景元大佬](https://github.com/tjy-gitnub/win12)Windows12开发的Caixukun12
 版权问题联系侵删
 待更新...
 
