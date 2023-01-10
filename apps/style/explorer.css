@@ -3,16 +3,16 @@
 }
 
 #win-explorer>.menu{
-    width: 250px;
+    min-width: 250px;
     height: 100%;
 }
 
 #win-explorer>.menu>.card{
     margin: 10px;
     border-radius: 10px;
-    background-color: #ffffff50;
+    background-color: var(--card);
     padding: 3px;
-    box-shadow: 2px 2px 5px #7f7f7f7f;
+    box-shadow: 2px 2px 5px var(--sd);
 }
 
 #win-explorer>.menu>.card>.title{
@@ -29,7 +29,7 @@
 }
 
 #win-explorer>.menu>.card>list>a.check{
-    background-color: #ffffff80;
+    background-color: var(--hover) !important;
 }
 
 #win-explorer>.menu>.pinned>list>a>img{
@@ -46,7 +46,7 @@
     margin-top: 4px;
     margin-right: 7px;
     border-radius: 50%;
-    box-shadow: 0 0 5px #7f7f7f7f;
+    box-shadow: 0 0 5px var(--sd);
 }
 
 #win-explorer>.main{
@@ -81,7 +81,7 @@
 }
 
 #win-explorer>.main>.tool>.b:hover{
-    background-color: #ffffff50;
+    background-color: var(--hover);
 }
 
 #win-explorer>.main>.tool>.b>img{
@@ -100,17 +100,12 @@
 #win-explorer>.main>.content{
     width: calc(100% - 10px);
     flex-grow: 1;
-    background-color: #ffffff50;
+    background-color: var(--card);
     border-radius: 10px;
     margin: -10px 10px 10px 0;
     padding: 8px;
-    box-shadow: 3px 3px 8px #7f7f7f7f;
+    box-shadow: 3px 3px 8px var(--sd);
     overflow-y: auto;
-}
-
-#win-explorer>.main>.content>.title{
-    margin:5px 0 10px 15px;
-    font-size: 35px;
 }
 
 #win-explorer>.main>.content>.tool{
@@ -118,6 +113,7 @@
     width: 100%;
     display: flex;
     padding: 10px 0 0 10px;
+    margin-bottom: 10px;
 }
 
 #win-explorer>.main>.content>.tool>.btn>.bi::before{
@@ -160,66 +156,36 @@
     margin-right: -23px;
 }
 
-#win-explorer>.main>.content>.class{
-    margin-left: 20px;
+#win-explorer>.main>.content>.view{
+    width: 100%;
+    height: max-content;
     display: flex;
+    flex-direction: column;
 }
 
-#win-explorer>.main>.content>.class>img{
-    width: 20px;
-    height: 20px;
-    margin-top: 3px;
-    margin-right: 5px;
-    filter:brightness(0.9);
-}
-
-#win-explorer>.main>.content>.group{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-}
-
-#win-explorer>.main>.content>.group>.item{
-    width: 280px;
-    margin: 5px;
-    height:  80px;
-    background-color: #ffffff50;
-    border-radius: 10px;
-    transition: 100ms;
-    display: flex;
-}
-
-#win-explorer>.main>.content>.group>.item:hover{
-    background-color: #ffffff90;
-}
-
-#win-explorer>.main>.content>.group>.item>img{
-    width: 55px;
-    height: 55px;
-    margin-top: 18px;
-    margin-left: 10px;
-}
-
-#win-explorer>.main>.content>.group>.item>div{
-    flex-grow: 1;
-    padding: 5px 5px 0 0;
-}
-
-#win-explorer>.main>.content>.group>.item>div>.bar{
-    width: calc(100% - 10px);
-    height: 8px;
-    border-radius: 10px;
-    background-color: #aaa;
-    margin: 5px 5px;
-}
-
-#win-explorer>.main>.content>.group>.item>div>.bar>.content{
-    height: 100%;
-    background-image: linear-gradient(90deg, #ad6eca, #4998d9);
-    border-radius: 10px;
-}
-
-#win-explorer>.main>.content>.group>.item>div>.info{
+#win-explorer>.main>.content>.view>.info{
     color: #888;
-    font-size: 14px;
+    text-align: center;
+}
+
+#win-explorer>.main>.content>.view>.item{
+    width: 100%;
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: flex;
+    transition: transform 300ms cubic-bezier(0.14, 1.02, 0.17, 0.03) !important;
+}
+
+#win-explorer>.main>.content>.view>.item:active{
+    transform: scale(0.98);
+    filter: blur(0.5px);
+}
+
+#win-explorer>.main>.content>.view>.item>img{
+    width: 26px;
+    height: 26px;
+}
+
+#win-explorer>.main>.content>.view>.item:hover{
+    background-color: var(--hover);
 }
